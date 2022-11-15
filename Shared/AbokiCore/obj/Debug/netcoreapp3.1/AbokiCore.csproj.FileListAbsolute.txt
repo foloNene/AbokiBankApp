@@ -1,0 +1,13 @@
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\bin\Debug\netcoreapp3.1\AbokiCore.deps.json
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\bin\Debug\netcoreapp3.1\AbokiCore.runtimeconfig.json
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\bin\Debug\netcoreapp3.1\AbokiCore.runtimeconfig.dev.json
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\bin\Debug\netcoreapp3.1\AbokiCore.dll
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\bin\Debug\netcoreapp3.1\AbokiCore.pdb
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\obj\Debug\netcoreapp3.1\AbokiCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\obj\Debug\netcoreapp3.1\AbokiCore.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\obj\Debug\netcoreapp3.1\AbokiCore.AssemblyInfo.cs
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\obj\Debug\netcoreapp3.1\AbokiCore.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\obj\Debug\netcoreapp3.1\AbokiCore.dll
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\obj\Debug\netcoreapp3.1\AbokiCore.pdb
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\obj\Debug\netcoreapp3.1\AbokiCore.genruntimeconfig.cache
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\obj\Debug\netcoreapp3.1\AbokiCore.csproj.AssemblyReference.cache
