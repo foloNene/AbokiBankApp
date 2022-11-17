@@ -7,4 +7,3 @@ C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\obj\Debug\netcoreapp3.1\
 C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\obj\Debug\netcoreapp3.1\AbokiData.csproj.CoreCompileInputs.cache
 C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\obj\Debug\netcoreapp3.1\AbokiData.dll
 C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\obj\Debug\netcoreapp3.1\AbokiData.pdb
-C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\obj\Debug\netcoreapp3.1\AbokiData.csproj.AssemblyReference.cache

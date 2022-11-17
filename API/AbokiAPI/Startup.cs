@@ -78,6 +78,13 @@ namespace AbokiAPI
 
 
             services.AddControllers();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("DepartmentPolicy",
+                    policy => policy.RequireClaim("department"));
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
