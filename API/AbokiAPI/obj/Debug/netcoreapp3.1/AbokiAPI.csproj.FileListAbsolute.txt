@@ -76,3 +76,5 @@ C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\obj\Debug\netcoreapp3.1\Abok
 C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\obj\Debug\netcoreapp3.1\AbokiAPI.pdb
 C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\obj\Debug\netcoreapp3.1\AbokiAPI.genruntimeconfig.cache
 C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

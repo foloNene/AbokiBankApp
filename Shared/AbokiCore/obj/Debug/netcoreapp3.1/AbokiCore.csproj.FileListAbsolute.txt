@@ -11,3 +11,6 @@ C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\obj\Debug\netcoreapp3.1\
 C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\obj\Debug\netcoreapp3.1\AbokiCore.pdb
 C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\obj\Debug\netcoreapp3.1\AbokiCore.genruntimeconfig.cache
 C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\obj\Debug\netcoreapp3.1\AbokiCore.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\bin\Debug\netcoreapp3.1\AbokiData.dll
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\bin\Debug\netcoreapp3.1\AbokiData.pdb
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiCore\obj\Debug\netcoreapp3.1\AbokiCore.csproj.CopyComplete

@@ -19,13 +19,13 @@ namespace AbokiAPI.Controllers
     public class ClaimsSetupController : ControllerBase
     {
         private readonly ApiDbContext _context;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ILogger<ClaimsSetupController> _logger;
 
         public ClaimsSetupController(
             ApiDbContext context,
-            UserManager<IdentityUser> userManager,
+            UserManager<ApplicationUser> userManager,
             RoleManager<IdentityRole> roleManager,
             ILogger<ClaimsSetupController> logger)
         {

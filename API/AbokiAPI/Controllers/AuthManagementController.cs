@@ -22,7 +22,7 @@ namespace AbokiAPI.Controllers
     [ApiController]
     public class AuthManagementController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly JwtConfig _jwtConfig;
         private readonly TokenValidationParameters _tokenValidationParams;
         private readonly ApiDbContext _apiDbContext;
@@ -30,7 +30,7 @@ namespace AbokiAPI.Controllers
         private readonly ILogger<AuthManagementController> _logger;
 
         public AuthManagementController(
-           UserManager<IdentityUser> userManager,
+           UserManager<ApplicationUser> userManager,
            IOptionsMonitor<JwtConfig> optionsMonitor,
            TokenValidationParameters tokenValidationParams,
            ApiDbContext apiDbContext,
@@ -70,7 +70,7 @@ namespace AbokiAPI.Controllers
                 }
 
                 //accept the data from the user
-                var newUser = new IdentityUser()
+                var newUser = new ApplicationUser()
                 {
                     Email = user.Email,
                     UserName = user.Username
@@ -200,7 +200,7 @@ namespace AbokiAPI.Controllers
 
         //Generate JWT Token
 
-        private async Task<AuthResult> GenerateJwtToken(IdentityUser user)
+        private async Task<AuthResult> GenerateJwtToken(ApplicationUser user)
         {
             //instances of JwtTokenHandler
             var jwtTokenHandler = new JwtSecurityTokenHandler();
@@ -246,7 +246,7 @@ namespace AbokiAPI.Controllers
         }
 
         //Get all valid claims for the corresponding user
-        private async Task<List<Claim>> GetAllValidClaims(IdentityUser user)
+        private async Task<List<Claim>> GetAllValidClaims(ApplicationUser user)
         {
             //var _options = new IdentityOptions();
 
