@@ -18,11 +18,11 @@ namespace AbokiAPI.Controllers
     public class SetupController : ControllerBase
     {
         private readonly ApiDbContext _context;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ILogger<SetupController> _logger;
         public SetupController(ApiDbContext context,
-            UserManager<IdentityUser> userManager,
+            UserManager<ApplicationUser> userManager,
              RoleManager<IdentityRole> roleManager,
              ILogger<SetupController> logger)
         {

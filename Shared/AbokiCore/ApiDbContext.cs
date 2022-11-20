@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AbokiCore
 {
-    public class ApiDbContext : IdentityDbContext
+    public class ApiDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApiDbContext(DbContextOptions<ApiDbContext> options)
            : base(options)
@@ -16,5 +16,9 @@ namespace AbokiCore
 
         //dbSet
         public virtual DbSet<RefreshToken> RefreshTokens { get; set;}
+
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+
     }
 }

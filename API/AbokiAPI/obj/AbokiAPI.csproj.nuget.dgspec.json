@@ -53,6 +53,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.10, )"
@@ -127,7 +131,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\USER\\Desktop\\Project\\AbokiApp\\Shared\\AbokiData\\AbokiData.csproj": {
+                "projectPath": "C:\\Users\\USER\\Desktop\\Project\\AbokiApp\\Shared\\AbokiData\\AbokiData.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
