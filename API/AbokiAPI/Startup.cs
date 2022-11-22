@@ -1,6 +1,7 @@
 using AbokiAPI.Services;
 using AbokiCore;
 using AbokiData.Configuration;
+using AbokiData.Utilis;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -36,6 +37,10 @@ namespace AbokiAPI
         {
             //Add the Account service
             services.AddScoped<IAccountRepository, AccountRepository>();
+
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
+
+            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             //AutoMapper
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
