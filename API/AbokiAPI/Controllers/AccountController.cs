@@ -8,11 +8,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace AbokiAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "AppUser")]
     public class AccountController : ControllerBase
     {
         private readonly IAccountRepository _accountRepository;
@@ -52,8 +55,11 @@ namespace AbokiAPI.Controllers
             //map to account
             var accountEntity = _mapper.Map<Account>(newAccount);
 
+            var userId = User.Claims.FirstOrDefault(a => a.Type == "Id")?.Value;
+            //var userEmail2 = User.Claims.FirstOrDefault(a => a.Type == JwtRegisteredClaimNames.Email)?.Value;
+
             //add
-             _accountRepository.Create(accountEntity, newAccount.Pin, newAccount.Confirmpin);
+            _accountRepository.Create(accountEntity, newAccount.Pin, newAccount.Confirmpin, userId);
 
             //Save Changes
             await _accountRepository.SaveChangesAsync();

@@ -8,7 +8,7 @@ namespace AbokiAPI.Services
     public interface IAccountRepository
     {
         Task<bool> AccountExistsAsync(Guid accountId);
-        Account Create(Account account, string Pin, string ConfirmPin);
+        Account Create(Account account, string Pin, string ConfirmPin, string userId);
         Task<Account> GetAccountAsync(Guid accountId);
         Task<IEnumerable<Account>> GetAccountsAsync();
         Task<bool> SaveChangesAsync();

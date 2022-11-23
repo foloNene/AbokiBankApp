@@ -42,7 +42,7 @@ namespace AbokiAPI.Services
         }
 
         //Create an Account
-        public Account Create(Account account, string Pin, string ConfirmPin)
+        public Account Create(Account account, string Pin, string ConfirmPin, string userId)
         {
             //check if pin isn't empty
             if (string.IsNullOrWhiteSpace(Pin))
@@ -53,10 +53,10 @@ namespace AbokiAPI.Services
             {
                 throw new ArgumentNullException(nameof(account));
             }
-            if (_dbcontext.Accounts.Any(x => x.Email == account.Email))
-            {
-                throw new ArgumentNullException("An account already exist with the email");
-            }
+            //if (_dbcontext.Accounts.Any(x => x.Email == account.Email))
+            //{
+            //    throw new ArgumentNullException("An account already exist with the email");
+            //}
             //Validate Pin
             if (!Pin.Equals(ConfirmPin))
             {
@@ -71,6 +71,7 @@ namespace AbokiAPI.Services
             account.PinHash = pinHash;
             account.PinSalt = pinSalt;
             account.AccountName = $"{account.FirstName} {account.LastName}";
+            account.ApplicationUserId = Guid.Parse(userId);
 
             //after being Harsged
             _dbcontext.Accounts.Add(account);

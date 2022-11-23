@@ -15,7 +15,7 @@ namespace AbokiAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[authorize(authenticationschemes = jwtbearerdefaults.authenticationscheme, roles = "appuser")]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "AppUser")]
     public class ClaimsSetupController : ControllerBase
     {
         private readonly ApiDbContext _context;
