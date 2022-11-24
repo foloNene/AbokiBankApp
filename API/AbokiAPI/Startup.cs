@@ -40,6 +40,8 @@ namespace AbokiAPI
 
             services.AddScoped<ITransactionRepository, TransactionRepository>();
 
+            services.AddScoped<IUserRepository, UserRepository>();
+
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             //AutoMapper
