@@ -38,6 +38,9 @@ namespace AbokiAPI.Services
 
         public async Task<Response> CreateNewTransaction(Transaction transaction)
         {
+            _logger.LogInformation(message: "Inside the respository about to create Transaction");
+
+
             Response response = new Response();
 
             try
@@ -58,6 +61,8 @@ namespace AbokiAPI.Services
 
         public async Task<Response> FindTransactionByDate(DateTime date)
         {
+            _logger.LogInformation(message: "Inside the respository about to Find Transaction");
+
             Response response = new Response();
             var transaction = await _dbcontext.Transactions.Where(x => x.TransactionDate == date).ToListAsync();
             response.ResponseCode = "00";
@@ -142,6 +147,9 @@ namespace AbokiAPI.Services
         //Make transfer
         public async Task<Response> MakeFundTransfer(string FromAccount, string ToAccount, decimal Amount, string TransactionPin)
         {
+
+            _logger.LogInformation(message: "Inside the respository about to Make Fund Transfer Transaction");
+
             //make withdraw
             Response response = new Response();
             Account sourceAccount = default;
@@ -215,6 +223,8 @@ namespace AbokiAPI.Services
 
         public async Task<Response> MakeWithdrawal(string AccountNumber, decimal Amount, string TransactionPin)
         {
+            _logger.LogInformation(message: "Inside the respository about to Make withdraw Transaction");
+
             //make withdrawal....
             Response response = new Response();
             Account sourceAccount = default; //individual

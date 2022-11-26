@@ -23,19 +23,16 @@ namespace AbokiAPI.Controllers
     [ApiController]
     public class AuthManagementController : ControllerBase
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly JwtConfig _jwtConfig;
-        private readonly TokenValidationParameters _tokenValidationParams;
-        private readonly ApiDbContext _apiDbContext;
-        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ILogger<AuthManagementController> _logger;
         private readonly IUserRepository _userRepository;
 
         public AuthManagementController(
-             IUserRepository userRepository
+             IUserRepository userRepository,
+             ILogger<AuthManagementController> logger
             )
         {
             _userRepository = userRepository;
+            _logger = logger;
         }
 
         [HttpPost]

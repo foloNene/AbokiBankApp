@@ -1,5 +1,6 @@
 ﻿using AbokiCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,29 +12,37 @@ namespace AbokiAPI.Services
     public class AccountRepository : IAccountRepository
     {
         private readonly ApiDbContext _dbcontext;
+        private readonly ILogger<AccountRepository> _logger;
 
-        public AccountRepository(ApiDbContext dbcontext)
+        public AccountRepository(ApiDbContext dbcontext,
+            ILogger<AccountRepository> logger)
         {
             _dbcontext = dbcontext ??
                 throw new ArgumentNullException(nameof(_dbcontext));
+            _logger = logger;
 
         }
 
         //Getting the list of Accounts
         public async Task<IEnumerable<Account>> GetAccountsAsync()
         {
+            _logger.LogInformation(message: "Inside the respository about to call all Accounts");
+
             return await _dbcontext.Accounts.ToListAsync();
         }
 
         //To check if Account exist
         public async Task<bool> AccountExistsAsync(Guid accountId)
         {
+            _logger.LogInformation(message: "Inside the respository about to call ExistAccount");
             return await _dbcontext.Accounts.AnyAsync(a => a.Id == accountId);
         }
 
         //Get one Account
         public async Task<Account> GetAccountAsync(Guid accountId)
         {
+            _logger.LogInformation(message: "Inside the respository about to call Get account by Id");
+
             if (accountId == Guid.Empty)
             {
                 throw new ArgumentNullException(nameof(accountId));
@@ -44,6 +53,9 @@ namespace AbokiAPI.Services
         //Create an Account
         public Account Create(Account account, string Pin, string ConfirmPin, string userId)
         {
+            //log
+            _logger.LogInformation(message: "Inside the respository about to create Accounts");
+
             //check if pin isn't empty
             if (string.IsNullOrWhiteSpace(Pin))
             {
@@ -115,6 +127,10 @@ namespace AbokiAPI.Services
 
         public void Update(Account account, string Pin = null)
         {
+
+            //log
+            _logger.LogInformation(message: "Inside the respository about to Update Accounts");
+
             // fnd userr
             var accountToBeUpdated = _dbcontext.Accounts.Find(account.Id);
             if (accountToBeUpdated == null) throw new ApplicationException("Account not found");
@@ -150,6 +166,10 @@ namespace AbokiAPI.Services
 
         public async Task<Account> Authenticate(string AccountNumber, string Pin)
         {
+            //log
+            _logger.LogInformation(message: "Inside the respository about to Auntheticate Accounts");
+
+
             if (string.IsNullOrEmpty(AccountNumber) || string.IsNullOrEmpty(Pin))
             {
                 return null;

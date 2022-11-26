@@ -44,6 +44,7 @@ namespace AbokiAPI.Services
 
         public async Task<RegistrationResponse> RegisterUserAsync(UserRegistrationDto user)
         {
+            _logger.LogInformation(message: "Inside the respository about to Register");
 
             if (user == null)
             {
@@ -114,6 +115,8 @@ namespace AbokiAPI.Services
 
         public async Task<RegistrationResponse> LoginAsync(UserLoginRequest user)
         {
+            _logger.LogInformation(message: "Inside the respository about to register Accounts");
+
             if (user != null)
             {
                 var existingUser = await _userManager.FindByEmailAsync(user.Email);
@@ -161,6 +164,7 @@ namespace AbokiAPI.Services
 
         public async Task<AuthResult> RefreshTokenAsync(TokenRequest tokenRequest)
         {
+
             if (tokenRequest != null)
             {
                 var result = await VerifyAndGenerateToken(tokenRequest);
@@ -254,6 +258,8 @@ namespace AbokiAPI.Services
 
             var claims = new List<Claim>
             {
+                    new Claim("Sub", user.Id),
+                    new Claim("Email", user.Email), 
                     new Claim("Id", user.Id),
                     new Claim(JwtRegisteredClaimNames.Email, user.Email),
                     new Claim(JwtRegisteredClaimNames.Sub, user.Email),
