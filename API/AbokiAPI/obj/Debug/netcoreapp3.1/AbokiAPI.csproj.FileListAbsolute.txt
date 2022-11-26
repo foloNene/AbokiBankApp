@@ -78,3 +78,15 @@ C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\obj\Debug\netcoreapp3.1\Abok
 C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\Serilog.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\Serilog.AspNetCore.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\USER\Desktop\Project\AbokiApp\API\AbokiAPI\bin\Debug\netcoreapp3.1\AbokiAPI.xml

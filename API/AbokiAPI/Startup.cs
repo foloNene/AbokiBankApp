@@ -17,7 +17,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -43,6 +45,9 @@ namespace AbokiAPI
             services.AddScoped<IUserRepository, UserRepository>();
 
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
+
+            //Add services to log the Machine info
+            services.AddSingleton<IScopeInformation, ScopeInformation>();
 
             //AutoMapper
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
@@ -124,6 +129,34 @@ namespace AbokiAPI
                     policy => policy.RequireClaim("department"));
 
             });
+
+            services.AddSwaggerGen(setupAction =>
+            {
+                setupAction.SwaggerDoc(
+                    "AbokiOpenAPISpecification",
+                    new Microsoft.OpenApi.Models.OpenApiInfo()
+                    {
+                        Title = "Aboki API",
+                        Version = "1",
+                        Description = "An App that run basic Bank functions.",
+                        Contact = new Microsoft.OpenApi.Models.OpenApiContact()
+                        {
+                            Email = "olaideadebanjo@gmail.com",
+                            Name = "Olaide Adebanjo",
+                            Url = new Uri("https://https://twitter.com/Iam_ladex")
+                        },
+                        License = new Microsoft.OpenApi.Models.OpenApiLicense()
+                        {
+                            Name = "MIT License",
+                            Url = new Uri("https://opensource.org/licenses/MIT")
+                        }
+
+                    });
+                //Include Xml Comments fr documenetation
+                var xmlCommentsFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlCommentsFullPath = Path.Combine(AppContext.BaseDirectory, xmlCommentsFile);
+                setupAction.IncludeXmlComments(xmlCommentsFullPath);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -135,6 +168,17 @@ namespace AbokiAPI
             }
 
             app.UseHttpsRedirection();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(setupAction =>
+            {
+                setupAction.SwaggerEndpoint("/swagger/AbokiOpenAPISpecification/swagger.json",
+                    "Aboki API");
+                setupAction.RoutePrefix = "";
+            });
+
+           
 
             app.UseRouting();
 
