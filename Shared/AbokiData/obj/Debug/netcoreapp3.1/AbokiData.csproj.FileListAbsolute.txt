@@ -1,0 +1,10 @@
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\bin\Debug\netcoreapp3.1\AbokiData.deps.json
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\bin\Debug\netcoreapp3.1\AbokiData.dll
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\bin\Debug\netcoreapp3.1\AbokiData.pdb
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\obj\Debug\netcoreapp3.1\AbokiData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\obj\Debug\netcoreapp3.1\AbokiData.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\obj\Debug\netcoreapp3.1\AbokiData.AssemblyInfo.cs
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\obj\Debug\netcoreapp3.1\AbokiData.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\obj\Debug\netcoreapp3.1\AbokiData.dll
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\obj\Debug\netcoreapp3.1\AbokiData.pdb
+C:\Users\USER\Desktop\Project\AbokiApp\Shared\AbokiData\obj\Debug\netcoreapp3.1\AbokiData.csproj.AssemblyReference.cache

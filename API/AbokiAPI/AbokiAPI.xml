@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AbokiAPI</name>
+    </assembly>
+    <members>
+        <member name="M:AbokiAPI.Controllers.AccountController.GetAccount(System.Guid)">
+            <summary>
+            Get account by Id
+            </summary>
+            <param name="accountId"></param>
+            <returns>Getting an Account by the Id</returns>
+        </member>
+        <member name="M:AbokiAPI.Controllers.AccountController.RegisterNewAccount(AbokiData.Models.RegisterNewAccountModel)">
+            <summary>
+            Register account
+            </summary>
+            <param name="newAccount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AbokiAPI.Controllers.AccountController.GetAllAccounts">
+            <summary>
+            Get The List of Accounts
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AbokiAPI.Controllers.AccountController.GetByAccountNumber(System.String)">
+            <summary>
+            Get account by Account Number
+            </summary>
+            <param name="AccountNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AbokiAPI.Controllers.AccountController.UpdateAccount(System.Guid,AbokiData.Models.UpdateAccountModel)">
+            <summary>
+            Update existing Account
+            </summary>
+            <param name="accountId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AbokiAPI.Controllers.AccountController.Authenticate(AbokiData.Models.AuthenticateModel)">
+            <summary>
+            Authenticate
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AbokiAPI.Controllers.TransactionController.CreateNewTransaction(AbokiData.Models.TransactionRequestDto)">
+            <summary>
+            Create new Transaction
+            </summary>
+            <param name="transactionRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AbokiAPI.Controllers.TransactionController.MakeDeposit(System.String,System.Decimal,System.String)">
+            <summary>
+            Deposit funds
+            </summary>
+            <param name="AccountNumber"></param>
+            <param name="Amount"></param>
+            <param name="TransactionPin"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AbokiAPI.Controllers.TransactionController.MakeWithdrawal(System.String,System.Decimal,System.String)">
+            <summary>
+            MAke withderawal
+            </summary>
+            <param name="AccountNumber"></param>
+            <param name="Amount"></param>
+            <param name="TransactionPin"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AbokiAPI.Controllers.TransactionController.MakeFundTransfer(System.String,System.String,System.Decimal,System.String)">
+            <summary>
+            Make fund Transafer
+            </summary>
+            <param name="FromAccount"></param>
+            <param name="ToAccount"></param>
+            <param name="Amount"></param>
+            <param name="TransactionPin"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
